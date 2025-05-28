@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TSDP Portal for managing various systems in the company">
+    <meta name="author" content="Information Technology Department">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <title>TSDP Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='img/bg.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <header>
+        <div class="container">
+            <h1><img src="{{ url_for('static', filename='img/favicon.png') }}" style="max-width: 50px; height: auto;"></h1>
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                ☰
+            </button>
+            <nav class="nav-links">
+                <a href='/'>Home</a>
+                <a href='/service'>Service</a>
+                <a href='/about'>About</a>
+                <a href='/contact'>Contact</a>
+                <a href='/km'>KM Portal</a>
+                <a href='/career'>Career</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="container2">
+        <h3 class="header-title">บริษัท ทามะ-โสภณ ตัวอย่าง สินค้า โปรดัก จำกัด</h3>
+        <h3 class="header-subtitle">ข้อมูลติดต่อเบอร์โทรศัพท์และอีเมล์ภายในบริษัทฯ</h3>
+        <div class="content">
+            <table id="myTable" border="1">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">No</th>
+                        <th style="text-align: center;">Code</th>
+                        <th style="text-align: center;">First name</th>
+                        <th style="text-align: center;">Last name</th>
+                        <th style="text-align: center;">Nickname</th>
+                        <th style="text-align: center;">Department</th>
+                        <th style="text-align: center; width: 150px;">Phon</th>
+                        <th style="text-align: center;">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in results %}
+                    <tr>
+                        <td style="text-align: center;">{{ loop.index }}</td>
+                        <td style="text-align: center;">{{ row['EMPid'] }}</td>
+                        <td>{{ row['F_Name'] }}</td>
+                        <td>{{ row['L_Name'] }}</td>
+                        <td style="text-align: center;">{{ row['N_Name'] }}</td>
+                        <td style="text-align: center;">{{ row['Department'] }}</td>
+                        <td style="text-align: center; width: 150px;">{{ row['Phon'] }}</td>
+                        <td>{{ row['Email'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="footer-line">
+        <p>Tama-Sopon Demo Products Co.,Ltd</p>
+        <p>Develop by Thanapurt Sopon | Last Update 2025</p>
+    </div>
+</body>
+</html>

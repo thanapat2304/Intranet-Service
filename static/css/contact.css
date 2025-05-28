@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Anuphan', sans-serif;
+    background: linear-gradient(135deg, #f4f4f9, #e0e0e0);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+header {
+    background-color: #004080;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 5px solid #ffcc00;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #ffcc00;
+    color: #004080;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 2000;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #ffcc00;
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #004080;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px solid #ffcc00;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.container2 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #bbbbbb;
+    border-left: none;
+    border-right: none;
+}
+
+.container2 .content table tbody tr:hover {
+    background-color: #256caa;
+    color: #fff !important;
+}
+
+th {
+    background-color: #004080;
+    color: #fff;
+    font-weight: 600;
+}
+
+.table-container {
+    overflow-x: auto;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+.footer-line p{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 2.8px 0;
+    color: #999;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+footer-line p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .footer-line {
+        font-size: 12px;
+        position: relative;
+    }
+
+    .footer-line p {
+        margin: 3px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-line {
+        font-size: 10px;
+        position: relative;
+    }
+
+    .footer-line p {
+        margin: 2px 0;
+    }
+}
+
+.header-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: normal;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.header-subtitle {
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    color: #34495e;
+    line-height: 1;
+}

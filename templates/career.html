@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <title>TSDP Portal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/career.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='img/bg.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <header>
+        <div class="container">
+            <h1><img src="{{ url_for('static', filename='img/favicon.png') }}" style="max-width: 50px; height: auto;"></h1>
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                ☰
+            </button>
+            <nav class="nav-links">
+                <a href='/'>Home</a>
+                <a href='/service'>Service</a>
+                <a href='/about'>About</a>
+                <a href='/contact'>Contact</a>
+                <a href='/km'>KM Portal</a>
+                <a href='/career'>Career</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="header">
+        <h1>We're Hiring</h1>
+    </div>
+    <div class="job-list">
+        {% for job in jobs %}
+        <div class="job-card">
+            <div>
+                <strong>{{ job.title }}</strong><br>{{ job.positions }}
+            </div>
+            <div class="job-details">
+                {% if job.file %}
+                <a href="{{ url_for('static', filename='PDF/KM/KM_1.pdf') }}" target="_blank" class="btn-open-file">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                {% else %}
+                <span class="no-file">ไม่มีไฟล์</span>
+                {% endif %}
+                <span class="update-date">Update: {{ job.update_date }}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

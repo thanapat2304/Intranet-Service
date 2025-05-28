@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TSDP Portal for managing various systems in the company">
+    <meta name="author" content="Information Technology Department">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <title>TSDP Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/service.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><img src="{{ url_for('static', filename='img/favicon.png') }}" style="max-width: 50px; height: auto;"></h1>
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                ☰
+            </button>
+            <nav class="nav-links">
+                <a href='/'>Home</a>
+                <a href='/service'>Service</a>
+                <a href='/about'>About</a>
+                <a href='/contact'>Contact</a>
+                <a href='/km'>KM Portal</a>
+                <a href='/career'>Career</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <main style="background-image: url('{{ url_for('static', filename='img/bg.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container1">
+            <div class="grid custom-layout">
+                <div class="box blue wide" onclick="window.open('https://outlook.office.com/mail/', '_blank');" style="cursor: pointer;">
+                    <h2>Email Microsoft 365</h2>
+                    <p>ระบบอีเมลบริษัทฯ</p>
+                </div>
+                <div class="box gray wide" onclick="window.open('https://sales-performance-c3y2.onrender.com', '_blank');" style="cursor: pointer;">
+                    <h2>Sales-Performance</h2>
+                    <p>ระบบเพิ่มประสิทธิภาพการทำงานของเซลส์</p>
+                </div>
+                <div class="box green" onclick="window.open('https://asset-system.onrender.com', '_blank');" style="cursor: pointer;">
+                    <h2>Asset-System</h2>
+                    <p>ระบบบริหารจัดการทรัพย์สิน</p>
+                </div>
+                <div class="box yellow" onclick="window.open('https://fda-service.onrender.com', '_blank');" style="cursor: pointer;">
+                    <h2>FDA Service</h2>
+                    <p>ระบบค้นหาไฟล์</p>
+                </div>
+                <div class="box red" onclick="window.open('https://sticker-system.onrender.com', '_blank');" style="cursor: pointer;">
+                    <h2>E-Ticket</h2>
+                    <p>ระบบสั่งพิมพ์สติ๊กเกอร์</p>
+                    <div class="intranet-text">Intranet</div>
+                </div>
+                <div class="box pink" onclick="window.open('https://transport-route.onrender.com', '_blank');" style="cursor: pointer;">
+                    <h2>Transport-Route</h2>
+                    <p>ระบบสรุปบิลส่งสินค้า</p>
+                    <div class="intranet-text">Intranet</div>
+                </div>
+                <div class="box orange" onclick="window.open('https://it-service-lf5x.onrender.com', '_blank');" style="cursor: pointer;">
+                    <h2>iT-Service</h2>
+                    <p>ระบบแจ้งซ่อม</p>
+                    <div class="intranet-text">Intranet</div>
+                </div>
+                <div class="box lightblue" onclick="window.open('https://forecasting-system.onrender.com', '_blank');" style="cursor: pointer;">
+                    <h2>forecast System</h2>
+                    <p>ระบบบริหารจัดการสินค้า</p>
+                    <div class="intranet-text">Intranet</div>
+                </div>
+                <div class="box mint wide" onclick="window.open('https://github.com/thanapat2304/Telegram_Bot_Invoice.git', '_blank');" style="cursor: pointer;">
+                    <h2>Telegram Bot Invoice</h2>
+                    <p>ระบบสรุปรายงานประจำวัน</p>
+                </div>
+                <div class="box purple" onclick="window.open('https://github.com/thanapat2304/Line-Chatbot.git', '_blank');" style="cursor: pointer;">
+                    <h2>Line Chatbot</h2>
+                    <p>ระบบช่วยเหลือการทำงานข้อเซลส์</p>
+                </div>
+                <div class="box brown" onclick="window.open('https://portfolio-crg1.onrender.com', '_blank');" style="cursor: pointer;">
+                    <h2>Portfolio</h2>
+                    <p>ระบบแสดงผลงาน</p>
+                </div>
+                <div class="box teal" onclick="window.open('#', '_blank');" style="cursor: pointer;">
+                    <h2>Github</h2>
+                    <p>รายระเอียดผลงาน</p>
+                    <div class="intranet-text">Intranet</div>
+                </div>
+            </div>
+            <br>
+            <div class="footer-line">
+                <p>Tama-Sopon Demo Products Co.,Ltd</p>
+                <p>Develop by Thanapurt Sopon | Last Update 2025</p>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

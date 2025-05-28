@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TSDP Portal for managing various systems in the company">
+    <meta name="author" content="Information Technology Department">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <title>TSDP Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <style>
+        .card.vision::before {
+            background-image: url('{{ url_for('static', filename='img/business-partner.jpg') }}');
+        }
+        
+        .card.mission::before {
+            background-image: url('{{ url_for('static', filename='img/pexels-pixabay-262353.jpg') }}');
+        }
+        
+        .card.value-proposition::before {
+            background-image: url('{{ url_for('static', filename='img/pexels-matthiaszomer-206130.jpg') }}');
+        }
+    </style>
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='img/bg.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <header>
+        <div class="container">
+            <h1><img src="{{ url_for('static', filename='img/favicon.png') }}" style="max-width: 50px; height: auto;"></h1>
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                ☰
+            </button>
+            <nav class="nav-links">
+                <a href='/'>Home</a>
+                <a href='/service'>Service</a>
+                <a href='/about'>About</a>
+                <a href='/contact'>Contact</a>
+                <a href='/km'>KM Portal</a>
+                <a href='/career'>Career</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <br>
+        <h2>About Us</h2>
+        <br>
+        <div class="section">
+            <p>
+                Tama-Sopon Demo Product Co., Ltd. was founded in March 1995. We specialize in importing and distributing high-quality culinary ingredients and gourmet products, primarily sourced from France, Italy, and other parts of Europe, as well as selected regions across Asia and South America.
+            </p>
+            <p>
+                Our customer base spans across various sectors, including five-star hotels, Michelin-rated restaurants, artisanal bakeries, high-end grocery chains, and food manufacturing companies throughout Thailand and Southeast Asia. With over 25 years of industry experience, we are committed to building long-term partnerships with both suppliers and clients, driven by a passion for quality, innovation, and service excellence.
+            </p>
+        </div>
+        <br>
+        <h2>Company Strategy</h2>
+        <div class="company-strategy">
+            <div class="card vision">
+                <span class="material-symbols-outlined">visibility</span> 
+                <h3> VISION</h3>
+                <p>To be the most reliable culinary partner for dessert artisans across Southeast Asia</p>
+            </div>
+            <div class="card mission">
+                <span class="material-symbols-outlined">show_chart</span>
+                <h3>MISSION</h3>
+                <p>To consistently source and supply premium-grade dessert and bakery ingredients, ensuring timely delivery and sustainable value for our clients</p>
+            </div>
+            <div class="card value-proposition">
+                <span class="material-symbols-outlined">join_left</span>
+                <h3>VALUE PROPOSITION</h3>
+                <p>TAMA sp is dedicated to discovering exceptional ingredients from every corner of the globe and distributing them to food professionals who value authenticity and excellence</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h2>Warehouse & Logistics</h2>
+        <div class="img-container">
+            <img src="{{ url_for('static', filename='img/29969-Converted.jpg') }}" alt="Logistics">
+        </div> 
+    </main>
+    <div class="footer-line">
+        <p>Tama-Sopon Demo Products Co.,Ltd</p>
+        <p>Develop by Thanapurt Sopon | Last Update 2025</p>
+    </div>
+</body>
+</html>

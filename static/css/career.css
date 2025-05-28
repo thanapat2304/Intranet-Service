@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Anuphan', sans-serif;
+    background: linear-gradient(135deg, #f4f4f9, #e0e0e0);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+header {
+    background-color: #004080;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 5px solid #ffcc00;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #ffcc00;
+    color: #004080;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 2000;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #ffcc00;
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #004080;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px solid #ffcc00;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.header {
+    font-family: 'Anuphan', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.header h1 {
+    font-weight: normal;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 1px;
+    background-color: #dddddd;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.job-card {
+    background-color: white;
+    border: 2px solid #004080;
+    margin: 10px;
+    padding: 15px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.job-card:hover {
+    background-color: #004080;
+    color: white;
+}
+
+.job-card:hover .job-details, .job-card:hover .update-date {
+    color: white;
+}
+
+.job-details .btn-open-file {
+    margin-right: 30px;
+    color: #ff6f61;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.job-details .btn-open-file:hover {
+    color: #ff4f42;
+}
+
+@media (max-width: 768px) {
+    .job-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-card {
+        width: 90%;
+    }
+}
